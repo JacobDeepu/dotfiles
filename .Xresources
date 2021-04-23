@@ -1,0 +1,77 @@
+Xft.autohint:  0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting:   1
+Xft.antialias: 1
+Xft.rgba:      rgb
+
+! ===== colours =====
+! black
+*color0:       #282A36
+*color8:       #414458
+
+! red
+*color1:       #FF5C38
+*color9:       #F07178
+
+! green
+*color2:       #2BE491
+*color10:      #44EB9F
+
+! yellow
+*color3:       #F2C024
+*color11:      #ECEB4D
+
+! blue
+*color4:       #556EA6
+*color12:      #82AAFF
+
+! magenta
+*color5:       #9069A8
+*color13:      #C792EA
+
+! cyan
+*color6:       #3FDCEE
+*color14:      #79E6F3
+
+! white
+*color7:       #FDFDFD
+*color15:      #BEBEC1
+
+! Special
+*background:   #1D1F28
+*foreground:   #FDFDFD
+*cursorColor:  #D8A6F4
+
+! ===== urxvt =====
+! Fonts
+URxvt.font:                 xft:MesloLGS NF:pixelsize=12
+URxvt.boldFont:             xft:MesloLGS NF:bold:pixelsize=12
+URxvt.italicFont:           xft:MesloLGS NF:italic:pixelsize=12
+URxvt.boldItalicFont:       xft:MesloLGS NF:bold:italic:pixelsize=12
+
+! Spacing
+URxvt.letterSpace:          -1
+
+! Scroll Bar
+URxvt.scrollBar:            false
+
+! Border size
+URxvt.internalBorder:       15
+
+! Clickable URLs
+URxvt.perl-ext:             default,url-select,selection-to-clipboard,clipboard
+URxvt.url-launcher:         /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+! Change Key bindings for copy/paste
+URxvt.iso14755:             false
+URxvt.iso14755_52:          false
+URxvt.keysym.C-C:           perl:clipboard:copy
+URxvt.keysym.C-V:           perl:clipboard:paste
+
+! Clipboard
+URxvt.clipboard.autocopy:   true
+URxvt.clipboard.copycmd:    xclip -i -selection clipboard
+URxvt.clipboard.pastecmd:   xclip -o -selection clipboard
+

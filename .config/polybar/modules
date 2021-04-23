@@ -1,0 +1,142 @@
+[module/audio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume>
+
+format-muted = <label-muted>
+
+label-muted = 婢
+label-muted-foreground = ${color.white}
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 奔
+ramp-volume-3 = 墳
+ramp-volume-4 = 墳
+ramp-volume-foreground = ${color.blue}
+
+[module/battery]
+type = internal/battery
+
+battery = BAT1
+adapter = AC
+
+poll-interval = 2
+time-format = %H:%M
+
+format-charging = <animation-charging>
+
+format-discharging = <ramp-capacity>
+
+format-full = <label-full>
+
+label-full = 
+label-full-foreground = ${color.green}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+ramp-capacity-foreground = ${color.yellow}
+ramp-capacity-0-foreground = ${color.red}
+ramp-capacity-1-foreground = ${color.red}
+ramp-capacity-8-foreground = ${color.yellow}
+ramp-capacity-9-foreground = ${color.green}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-7 = 
+animation-charging-8 = 
+animation-charging-9 = 
+
+animation-charging-foreground = ${color.yellow}
+animation-charging-0-foreground = ${color.red}
+animation-charging-9-foreground = ${color.green}
+
+animation-charging-framerate = 750
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+date = %a
+date-alt = "%a %b %d,"
+
+time = %I:%M
+time-alt = " %I:%M %P"
+
+format = <label>
+format-padding = 4
+
+label = %date% %time%
+label-foreground = ${color.fg}
+
+[module/i3]
+type = internal/i3
+
+strip-wsnumbers = true
+index-sort = true
+fuzzy-match = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
+label-focused = 柳
+label-focused-padding = 1
+label-focused-foreground = ${color.fg}
+label-focused-background = ${color.bg}
+
+label-unfocused = %icon%
+label-unfocused-padding = 1
+label-unfocused-foreground = ${color.white}
+label-unfocused-background = ${color.bg}
+
+label-urgent = %icon%
+label-urgent-padding = 1
+label-urgent-foreground = ${color.yellow}
+label-urgent-background = ${color.bg}
+
+[module/wireless-network]
+type = internal/network
+interface = ${env:WLAN}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-connected-padding = 2
+format-connected-foreground = ${color.purple}
+
+format-disconnected = <label-disconnected>
+format-disconnected-padding = 2
+format-disconnected-foreground = ${color.white}
+
+label-connected = 直
+label-disconnected = 睊
+
+[module/wired-network]
+type = internal/network
+interface = ${env:ETH}
+
+interval = 3.0
+
+label-connected = 
+label-disconnected-foreground = ${color.white}

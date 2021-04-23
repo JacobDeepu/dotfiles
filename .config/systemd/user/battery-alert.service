@@ -1,0 +1,10 @@
+[Unit]
+Description=Battery Alert
+
+[Service]
+ExecStart=/home/dreamer/.local/bin/battery-alert.sh
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=default.target
